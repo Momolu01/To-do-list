@@ -9,7 +9,8 @@ module.exports = {
       blue_third: "#DBE6FD",
       gray: "#B2AB8C"
     },
-    extend: {}
+    extend: {
+    }
   },
   variants: {
     extend: {},
