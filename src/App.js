@@ -17,7 +17,7 @@ const list = [
 
 function App() {
 
-  const [taskList, setTaskList] = useState([]);
+  const [taskList, setTaskList] = useState([list]);
   const [taskTitle, setTaskTitle] = useState("");
   
   // Functions
