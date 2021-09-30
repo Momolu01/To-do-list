@@ -16,19 +16,6 @@ const TodoItem = ( ({ title, status, setTaskList, index, taskList}) => {
             setTaskList(currentTask);            
         }
     }
-//     const editTask = () => {
-// 
-//         return (
-//             <div className=" absolute">
-//                 <form>
-//                     <select>
-//                         <option value="1"></option>
-//                     </select>
-// 
-//                 </form>
-//             </div>
-//         )
-//     }
 
     return(
         <div className="flex justify-start py-1 text-center">
@@ -38,14 +25,23 @@ const TodoItem = ( ({ title, status, setTaskList, index, taskList}) => {
                 checked={status? true : false}
             />
             <h2 
-            className={`${status? ("line-through") : ("")} w-full `}
+            className={`${status? ("line-through") : ("")} w-60 text-left `}
             >{title}</h2>
-            <div className="w-13 bg-gray px-1 relative">
-                <button 
-                onClick={deteleTask}
-                >{!status ? 
-                    "..." : 
-                    "Delete"}</button>
+            <div className="w-16 bg-gray px-1  inline">
+                {status?(
+                    <button 
+                    onClick={deteleTask}
+                    >{"Delete"}</button>
+
+                ):(
+                    <div >...
+                      {/* <form>
+                            <select>
+                                <option value="1">1</option>
+                            </select>
+                       </form> */}
+                    </div>  
+                )}
             </div>
         </div>
     )
